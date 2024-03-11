@@ -28,27 +28,23 @@ class RegistrationFormType extends AbstractType
             ])
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
-                'constraints' => [
-                    new IsTrue([
-                        'message' => 'You should agree to our terms.',
-                    ]),
-                ],
+                'attr' => [
+                    'name' => 'accept-terms',
+                    'value' => 1,
+                    'id' => 'accept-terms',
+                    'required' => true
+                ]
             ])
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
+                'label' => 'Password',
                 'mapped' => false,
-                'attr' => ['autocomplete' => 'new-password'],
-                'constraints' => [
-                    new NotBlank([
-                        'message' => 'Please enter a password',
-                    ]),
-                    new Length([
-                        'min' => 6,
-                        'minMessage' => 'Your password should be at least {{ limit }} characters',
-                        // max length allowed by Symfony for security reasons
-                        'max' => 4096,
-                    ]),
+                'attr' => [
+                    'required' => true,
+                    'data-parsley-trigger' => 'change',
+                    'data-parsley-minlength' => 6,
+                    'data-parsley-error-message' => 'The password must be at least 6 characters.'
                 ],
             ])
         ;

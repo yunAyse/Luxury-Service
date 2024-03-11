@@ -41,12 +41,6 @@
 	{#balise form ouvrante #}
 
 
-	{{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-	{{ form_row(registrationForm.agreeTerms) }}
-
-	<button type="submit" class="btn">Register</button>
 	{# form fermante #}
 
 
@@ -100,10 +94,14 @@
 								<span class="help-block">Type your email address.</span>
 							</div>
 							<div class="input-field">
-								<input type="password" name="password" id="password" value="" required data-parsley-trigger="change" data-parsley-minlength="6" data-parsley-error-message="The password must be at least 6 characters.">
-								<label for="password">Password</label>
+								
+								{{ form_label(registrationForm.plainPassword) }}
+								{{ form_widget(registrationForm.plainPassword) }}
 								<i class="fa fa-eye show-password"></i>
 								<span class="help-block">Type your password.</span>
+
+								
+
 							</div>
 							<div class="input-field">
 								<input type="password" name="password_confirmation" id="password_confirmation" value="" required data-parsley-trigger="change" data-parsley-equalto="#password" data-parsley-error-message="Password does not match.">
@@ -112,10 +110,11 @@
 								<span class="help-block">Confirm your password.</span>
 							</div>
 							<div class="checkbox">
-								<input type="checkbox" name="accept-terms" value="1" id="accept-terms" required/>
+							<input type="checkbox" name="accept-terms" value="1" id="accept-terms" required>
 								<label for="accept-terms">I have read and I accept the
 									<a href="#!" target="_blank">Terms Of Use</a>
 								</label>
+								{{ form_widget(registrationForm.agreeTerms) }}
 							</div>
 
 							<button type="submit" class="btn btn-lg gradient secondary btn-block waves-effect waves-light mt-20 mb-20">Create an account</button>

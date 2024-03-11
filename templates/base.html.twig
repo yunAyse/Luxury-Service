@@ -9,9 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="keywords" content="">
-		<meta name="author" content="idmkr.io">
-        
-         {% block metaEtLinksSupplementaire %}{% endblock %}
+		<meta name="author" content="idmkr.io"> {% block metaEtLinksSupplementaire %}{% endblock %}
 
 
 		<script>
@@ -112,7 +110,7 @@ $(handler);
 											<a href="/templates/job/index.html">Jobs Offers</a>
 										</li>
 										<li>
-											<a href="/templates/compagny.html">About Us</a>
+											<a href="{{ path('app_about_us') }}">About Us</a>
 										</li>
 										<li>
 											<a href="/templates/contact.html">Contact</a>
@@ -175,7 +173,7 @@ $(handler);
 		</header>
 		{% block body %}{% endblock %}
 
-        {% block JavascriptDuBas %} {% endblock %} 
+		{% block JavascriptDuBas %}{% endblock %}
 
 		<footer class="footer footer-four">
 			<div class="primary-footer brand-bg text-center">
