@@ -107,17 +107,17 @@ $(handler);
 											<a href="/">Home</a>
 										</li>
 										<li>
-											<a href="/templates/job/index.html">Jobs Offers</a>
+											<a href="{{ path('app_job') }}">Jobs Offers</a>
 										</li>
 										<li>
-											<a href="{{ path('app_about_us') }}">About Us</a>
+											<a href="/about/us">About Us</a>
 										</li>
 										<li>
-											<a href="/templates/contact.html">Contact</a>
+											<a href="/contact">Contact</a>
 										</li>
 										<li>-</li>
 										<li>
-											<a href="/templates/auth/profile.html">Profile</a>
+											<a href="/templates/auth/profile.html.twig">Profile</a>
 										</li>
 										<li>
 											<a href="/logout.html">Logout</a>
@@ -129,12 +129,12 @@ $(handler);
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="menuzord-menu pull-right light" role="navigation">
 								<li class=" dropdown">
-									<a target="_self" href="/templates/auth/login.html">
+									<a target="_self" href="/login">
 										<span>Login</span>
 									</a>
 								</li>
 								<li class=" dropdown">
-									<a target="_self" href="/templates/auth/register.html" class="btn bn-lg gradient secondary btn-block waves-effect waves-light btn-register">
+									<a target="_self" href="/register" class="btn bn-lg gradient secondary btn-block waves-effect waves-light btn-register">
 										<span>Sign Up</span>
 									</a>
 
@@ -148,19 +148,19 @@ $(handler);
 									</a>
 								</li>
 								<li class=" dropdown">
-									<a target="_self" href="/templates/jobs/index.html">
+									<a target="_self" href="/job">
 										<i class=""></i>
 										<span>Jobs offers</span>
 									</a>
 								</li>
 								<li class=" dropdown">
-									<a target="_self" href="/templates/compagny.html">
+									<a target="_self" href="/about/us">
 										<i class=""></i>
 										<span>About us</span>
 									</a>
 								</li>
 								<li class=" dropdown">
-									<a target="_self" href="/templates/contact.html">
+									<a target="_self" href="/contact">
 										<i class=""></i>
 										<span>Contact</span>
 									</a>

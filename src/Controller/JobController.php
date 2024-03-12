@@ -17,11 +17,11 @@ class JobController extends AbstractController
     }
 
     // SECOND ROUTE FOR THE JOB DETAILS TODO !!!!!
-    // #[Route('/job', name: 'app_job')]
-    // public function index(): Response
-    // {
-    //     return $this->render('job/index.html.twig', [
-    //         'controller_name' => 'JobController',
-    //     ]);
-    // }
+    #[Route('/details', name: 'app_details')]
+    public function details(): Response
+    {
+        return $this->render('job/details.html.twig', [
+            'controller_name' => 'JobController',
+        ]);
+    }
 }
